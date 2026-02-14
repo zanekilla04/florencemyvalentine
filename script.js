@@ -6,6 +6,7 @@ const celebrate = document.getElementById("celebrate");
 const music = document.getElementById("bg-music");
 const flash = document.getElementById("flash-overlay");
 
+// Sound files from your folder
 const clickSound = new Audio('button_click.mp3');
 const noSound = new Audio('NO_button_click.mp3');
 
@@ -51,8 +52,8 @@ yesBtn.addEventListener("click", () => {
     yesBtn.classList.add("btn-click-fx");
     document.body.classList.add("celebration-mode");
     
-    // Transform Letter
-    letter.src = "letter3.png";
+    // FIXED: Changed to .PNG (uppercase) to match your folder
+    letter.src = "letter3.PNG";
     letter.classList.add("pop-in", "letter-glow");
 
     setTimeout(() => {
@@ -103,3 +104,4 @@ const moveNoButton = () => {
 };
 noBtn.addEventListener("mouseover", moveNoButton);
 noBtn.addEventListener("click", moveNoButton);
+
